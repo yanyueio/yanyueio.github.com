@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Exo+2:400,700&subset=cyrillic");
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: system-ui,-apple-system,BlinkMacSystemFont;
+  font-size: 100%;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 16.66% 150px;
+  width: 100%;
+}
+
+.loading {
+  background: url("/assets/image/load.gif") no-repeat center center;
+  height: 55px;
+  width: 55px;
+  background-size: cover;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.year_milestone {
+  border: 1px dashed rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+  line-height: 1.5em;
+}
+
+article {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  margin-top: 150px;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 1.15rem;
+  overflow: hidden;
+  display: block;
+  bottom: 100px;
+}
+
+
+.timeline__nav {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  transition: top 0.5s ease-out;
+}
+.timeline__nav ul {
+  list-style: none;
+  list-style-position: inside;
+  margin: 15px 0;
+}
+.timeline__nav ul li {
+  margin: 15px 0;
+  padding-left: 0;
+  list-style-type: none;
+  color: #bfc1c3;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.timeline__nav ul li.active {
+  font-weight: bold;
+  color: #f94125;
+  border-bottom: 1px dotted transparent;
+  transform: scale(1.2);
+}
+.timeline__nav ul li:hover {
+  color: #000;
+}

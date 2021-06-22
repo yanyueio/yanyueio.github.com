@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>新·里程碑</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/assets/image/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/noselect.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/header.css">
+    <link rel='stylesheet' type='text/css' href='/assets/css/google_fonts.css' />
+    <link rel="stylesheet" type="text/css" href="/assets/css/noselect.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/animation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="/assets/css/mile_style.css">
+</head>
+
+<body class='noselect'>
+
+    <div id="header" class="header header-fix">
+        <h1><a href="/" target="_self"><img class="header-logo" src="/assets/image/Site-logo.png"></a></h1>
+        <div class="user-in" id="user">
+            <span>Portal</span>
+        </div>
+    </div>
+    <div class="loading" id="loading"></div>
+    <div id="write" style="display: none;">        
+        <article class="timeline">
+            <h1 style="text-align: center;"> 新·里程碑</h1>
+            <nav class="timeline__nav" id="timeline__nav">
+                <ul id="year_list">
+                    NULL
+                </ul>
+            </nav>
+            <section class="timeline__section">
+                <div class="wrapper" id="milestones">
+                    NULL
+                </div>
+            </section>
+        </article>
+    </div>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="/assets/js/mile_script.js"></script>
+
+    <script>
+        // Time to show the spinner
+        function hideLoader() {
+            var loader = document.getElementById("loading");
+            var app_main = document.getElementById("write");
+
+            loader.style.display = "none";
+            app_main.style.display = "block";
+
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hideLoader, 500);
+        }, false);
+    </script>
+
+    <script>
+        document.ondragstart = function () {
+            return false
+        }; //for image
+        document.oncontextmenu = function (e) {
+            return false
+        }; //for right click disable
+    </script>
+
+</body>
+
+</html>
